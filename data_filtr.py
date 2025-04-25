@@ -1,0 +1,31 @@
+def filter_data(data):
+    """This function manually filters out keys and values based on elements that do not appear consistently"""
+    filtered_data = {
+        "Marka pojazdu": data.get("Marka pojazdu", ""),
+        "Model pojazdu": data.get("Model pojazdu", ""),
+        "Wersja": data.get("Wersja", ""),
+        "Kolor": data.get("Kolor", ""),
+        "Liczba drzwi": data.get("Liczba drzwi", ""),
+        "Liczba miejsc": data.get("Liczba miejsc", ""),
+        "Rok produkcji": data.get("Rok produkcji", ""),
+        "Generacja": data.get("Generacja", ""),
+        "Przebieg": data.get("Przebieg", ""),
+        "Pojemność skokowa": data.get("Pojemność skokowa", ""),
+        "Moc": data.get("Moc", ""),
+        "Rodzaj paliwa": data.get("Rodzaj paliwa", ""),
+        "Skrzynia biegów": data.get("Skrzynia biegów", ""),
+        "Napęd": data.get("Napęd", ""),
+        "Spalanie Poza Miastem": data.get("Spalanie Poza Miastem", ""),
+        "Spalanie W Mieście": data.get("Spalanie W Mieście", ""),
+        "Typ nadwozia": data.get("Typ nadwozia", ""),
+        "Rodzaj koloru": data.get("Rodzaj koloru", ""),
+        "Kraj pochodzenia": data.get("Kraj pochodzenia", ""),
+        "Data pierwszej rejestracji w historii pojazdu": data.get("Data pierwszej rejestracji w historii pojazdu", ""),
+        "Numer rejestracyjny pojazdu": data.get("Numer rejestracyjny pojazdu", ""),
+        "Zarejestrowany w Polsce": data.get("Zarejestrowany w Polsce", ""),
+        "Bezwypadkowy": data.get("Bezwypadkowy", ""),
+        "Serwisowany w ASO": data.get("Serwisowany w ASO", ""),
+        "Stan": data.get("Stan", ""),
+        "Cena": data.get("Cena", ""),
+    }
+    return filtered_data
