@@ -8,10 +8,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
 
-from data_filtr import filter_data  # <-- poprawiona ścieżka do Twojej funkcji
+from data_filtr import filter_data
 
 def scrap_data_to_excel(num_pages, output_filename="otomoto_data.xlsx"):
-    """Scrapes data from otomoto.pl and saves to Excel."""
     try:
         service = Service(GeckoDriverManager().install())
         options = webdriver.FirefoxOptions()
@@ -64,6 +63,7 @@ def scrap_data_to_excel(num_pages, output_filename="otomoto_data.xlsx"):
                             price = price_element.get_text(strip=True)
                             data_dict["Cena"] = price
 
+                        # Pobierz pozostałe szczegóły
                         if details_section:
                             print("🔍 Szczegóły ogłoszenia znalezione.")
                             # Iteruj po wszystkich `div` z `data-testid`
@@ -104,5 +104,4 @@ def scrap_data_to_excel(num_pages, output_filename="otomoto_data.xlsx"):
     else:
         print("⚠️ Nie zebrano żadnych danych. Plik nie został zapisany.")
 
-if __name__ == "__main__":
-    scrap_data_to_excel(num_pages=1)
+
