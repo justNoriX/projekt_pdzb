@@ -27,5 +27,6 @@ def filter_data(data):
         "Serwisowany w ASO": data.get("Serwisowany w ASO", ""),
         "Stan": data.get("Stan", ""),
         "Cena": data.get("Cena", ""),
+        "Lokalizacja": data.get("Lokalizacja", ""),
     }
     return filtered_data
