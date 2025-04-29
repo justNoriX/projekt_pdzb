@@ -11,6 +11,7 @@ import os
 from data_filtr import filter_data
 
 def scrap_data_to_excel(num_pages, output_filename="otomoto_data.xlsx"):
+    # Uruchamianie przeglądarki firefox
     try:
         service = Service(GeckoDriverManager().install())
         options = webdriver.FirefoxOptions()
@@ -45,7 +46,7 @@ def scrap_data_to_excel(num_pages, output_filename="otomoto_data.xlsx"):
                     try:
                         link_url = link['href']
                         driver.get(link_url)
-
+                        # Wyszukiwanie lokalizacji (dane o odpowiedniej klasie)
                         location_element = article.find("p", class_="ooa-oj1jk2")
                         location = location_element.get_text(strip=True) if location_element else "Nieznana lokalizacja"
                         
@@ -87,7 +88,7 @@ def scrap_data_to_excel(num_pages, output_filename="otomoto_data.xlsx"):
                         filtered_data = filter_data(data_dict)
                         all_data.append(filtered_data)
                         print(f"✅ Zebrano dane: {filtered_data}")
-                        print(filtered_data)
+    
                     except Exception as e:
                         print(f"⚠️ Błąd podczas przetwarzania ogłoszenia: {e}")
                         continue
