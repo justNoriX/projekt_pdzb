@@ -1,5 +1,5 @@
 def filter_data(data):
-    """This function manually filters out keys and values based on elements that do not appear consistently"""
+    # Filtrowanie danych, aby pozostawić tylko istotne informacje
     filtered_data = {
         "Marka pojazdu": data.get("Marka pojazdu", ""),
         "Model pojazdu": data.get("Model pojazdu", ""),
