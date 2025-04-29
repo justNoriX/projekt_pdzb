@@ -1,1 +1,2 @@
 # projekt_pdzb
+# Przy pomocy webscrapingu z serwisu otomoto.pl zostaną pobrane dane dotyczące rynku pojazdów używanych, następnie informacje zostaną oczyszczone w celu usunięcia błędów, czy duplikatów. Uzyskane dane pozwolą dokonać analizy rynku motoryzacyjnego w szczególności skupiając się na czynnikach takich jak marka pojazdu, jago stan, cena, czy lokalizacja. Projekt umożliwi lepsze zorientowanie się na rynku pojazdów używanych, dokonanie świadomego zakupu lub sprzedaży.
