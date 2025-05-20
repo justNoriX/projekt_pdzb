@@ -10,7 +10,7 @@ import os
 
 from data_filtr import filter_data
 
-def scrap_data_to_excel(num_pages, output_filename="otomoto_data.xlsx"):
+def scrap_data_to_excel(num_pages, start_page, output_filename):
     # Uruchamianie przeglądarki firefox
     try:
         service = Service(GeckoDriverManager().install())
@@ -24,7 +24,7 @@ def scrap_data_to_excel(num_pages, output_filename="otomoto_data.xlsx"):
 
     all_data = []
 
-    for page_number in range(1, num_pages + 1):
+    for page_number in range(start_page, start_page + num_pages):
         print(f"🌐 Strona {page_number}...")
         try:
             url = f"https://www.otomoto.pl/osobowe?page={page_number}"
